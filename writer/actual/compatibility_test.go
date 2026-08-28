@@ -41,7 +41,7 @@ func (c *compatibilityTransport) RoundTrip(request *http.Request) (*http.Respons
 	c.body = body
 	return &http.Response{
 		StatusCode: http.StatusOK,
-		Body:       io.NopCloser(bytes.NewBufferString(`{"data":{"added":["one","two"],"updated":[]}}`)),
+		Body:       io.NopCloser(bytes.NewBufferString(`{"data":{"added":["one","two"],"updated":[],"errors":[]}}`)),
 		Header:     make(http.Header),
 	}, nil
 }
